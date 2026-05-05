@@ -1,0 +1,73 @@
+{
+  "name": "eAffidavit",
+  "short_name": "eAffidavit",
+  "description": "Create affidavits online in JPG format. Fast, easy and reliable.",
+  "id": "com.eaffidavit.com",
+  "start_url": "\/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "display": "standalone",
+  "override_display": ["fullscreen", "standalone"],
+  "icons": [
+    {
+      "sizes": "114x114",
+      "src": "icons/touch-icon-114x114.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "120x120",
+      "src": "icons/touch-icon-120x120.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "144x144",
+      "src": "icons/touch-icon-144x144.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "152x152",
+      "src": "icons/touch-icon-152x152.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "180x180",
+      "src": "icons/touch-icon-180x180.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "57x57",
+      "src": "icons/touch-icon-57x57.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "60x60",
+      "src": "icons/touch-icon-60x60.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "72x72",
+      "src": "icons/touch-icon-72x72.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "76x76",
+      "src": "icons/touch-icon-76x76.png",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/app-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/app-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "prefer_related_applications": false
+}

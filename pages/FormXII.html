@@ -1,0 +1,236 @@
+<div class="services__section-title p-section-title">Form Ⅻ for Bhumi Digitization</div>
+<div style="padding:0 0 16px;margin-bottom:11px;">Following bouquet of online Aadhaar services are available for access. Click on the tab to navigate to the service-specific page.</div>
+<div class="form_container">
+  <form onsubmit="return initAffidavit(event, 'XII')">
+    <input type="hidden" id="dimension" value="310x90">
+    <div style="color:#2072a0;font-size:18px;margin-bottom:16px;font-weight:600;margin-top:11px;">शपथ पत्र का प्रारूप (भाषा) चुनें / Select Affidavit Format</div>
+    <div class="auth-form__radio-group">
+      <label class="auth-form__radio-button" for="hi">
+        <input type="radio" name="lang" id="hi" onchange="switchKbdLang(this.value)" value="hi" checked>
+        <span class="auth-form__radio-button-label">हिंदी / Hindi</span>
+      </label>
+      <label class="auth-form__radio-button" for="en">
+        <input type="radio" name="lang" onchange="switchKbdLang(this.value)" id="en" value="en">
+        <span class="auth-form__radio-button-label">अंग्रेजी / English</span>
+      </label>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="applicant" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">आवेदक का नाम / Applicant Name</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="father" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">पिता का नाम / Father Name</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="mouza" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">मौजा / Mouza</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="psNo" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">थाना न० / Police Station No</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="halka" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">हल्का / Halka</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+    
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="block" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">अंचल / Circle</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="district" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">जिला / District</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="requests__section-title p-section-title" style="padding-bottom:0;">जमाबंदी विवरण / Jamabandi Details</div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="j_district" autocomplete="off" class="xfield" required>
+        <span class="placeholder">जिला / District</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="j_block" autocomplete="off" class="xfield" required>
+        <span class="placeholder">अंचल / Circle</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="j_halka" autocomplete="off" class="xfield" required>
+        <span class="placeholder">हल्का / Halka</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+    
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="j_mouza" autocomplete="off" class="xfield" required>
+        <span class="placeholder">मौजा / Mouza</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="j_psNo" autocomplete="off" class="xfield" min="0" max="9999" required>
+        <span class="placeholder">थाना न० / Police Station No</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="volumeNo" autocomplete="off" class="xfield v-render" min="0" max="9999" required>
+        <span class="placeholder">भाॅल्युम न० / Volumne No (optional)</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="pageNo" autocomplete="off" class="xfield v-render" min="0" max="999" required>
+        <span class="placeholder">पेज न० / Page No (optional)</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="jamabandiNo" autocomplete="off" class="xfield v-render" min="0" required>
+        <span class="placeholder">जमाबंदी न० / Jamabandi No (optional)</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="mobile" autocomplete="off" class="xfield" min="1000000000" required>
+        <span class="placeholder">मोबाइल न० / Mobile No</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+    
+    <div class="field content_wrap upload_container">
+      <input type="file" id="signature" onchange="loadSignature(event)" accept="image/png, image/jpg, image/jpeg" hidden>
+      <div class="requests__section-title p-section-title">Upload Applicant Signature with transparent/white Background</div>
+      <div class="upload" onclick="showUploaderBox()">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"></path>
+        </svg>
+        <span class="upload_label">Upload Signature of Applicant</span>
+      </div>
+      <div class="error">
+        <svg focusable="false" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+          </path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+      <div class="filename"></div>
+    </div>
+
+    <div style="color:#2072a0;font-size:18px;margin-bottom:16px;font-weight:600;">घोषणा / Self Declaration</div>
+
+    <div class="self">
+      <p>मैं <span class="applicant"></span>,  पिता- <span class="father"></span>, मौजा- <span class="mouza"></span>, थाना न०- <span class="psNo"></span>, हल्का- <span class="halka"></span>, अंचल- <span class="block"></span>, जिला- <span class="district"></span> :-</p>
+      <p>भाॅल्युम न० <span class="volumeNo"></span></p>
+      <p>पेज न० <span class="pageNo"></span></p>
+      <p>जमाबंदी न० <span class="jamabandiNo"></span></p>
+      <p>मैं  प्रमाणित करता/करती हूँ कि मेरे द्वारा दी गई उपरोक्त जानकारी मेरे ज्ञान और विश्वास के अनुसार सत्य है| यदि मेरे द्वारा दी गई जानकारी असत्य / गलत पायी जाती है तो मैं पूर्ण रूप से जानता/जानती हूँ कि इस आवेदन-पत्र के आधार पर दिये गये प्रमाण-पत्र के द्वारा शैक्षणिक संस्थान में लिया गया प्रवेश / लोक सेवाओं में प्राप्त की गई नियुक्ति निरस्त कर दी जायेगी / दिया जायेगा और इस संबंध में विधि एवं नियमों के अधीन मेरे विरूद्ध की जाने वाली कार्रवाई के लिए मैं उत्तरदायी रहूँगा/रहूँगी|</p>
+    </div>
+
+    <div class="btn_wrap">
+      <button type="submit">
+        <svg width="22" height="22" viewBox="0 0 46 46" class="preloader">
+          <circle cx="23" cy="23" r="18" stroke-width="4"></circle>
+        </svg>
+        <span>Generate Affidavit</span>
+      </button>
+    </div>
+  </form>
+</div>

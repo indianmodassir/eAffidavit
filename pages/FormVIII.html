@@ -1,0 +1,246 @@
+<div class="services__section-title p-section-title">Affidavit Form Ⅷ for (OBC) Certificate</div>
+<div style="padding:0 0 16px;margin-bottom:11px;">Used to declare OBC non-creamy layer status for government of India, reservations, and official verification based on income and service criteria.</div>
+<div class="form_container">
+  <form onsubmit="return initAffidavit(event, 'VIII')">
+    <input type="hidden" id="dimension" value="520x90">
+    <div style="color:#2072a0;font-size:18px;margin-bottom:16px;font-weight:600;margin-top:11px;">शपथ पत्र का प्रारूप (भाषा) चुनें / Select Affidavit Format</div>
+    <div class="auth-form__radio-group">
+      <label class="auth-form__radio-button" for="hi">
+        <input type="radio" name="lang" id="hi" onchange="switchKbdLang(this.value)" value="hi" checked>
+        <span class="auth-form__radio-button-label">हिंदी / Hindi</span>
+      </label>
+      <label class="auth-form__radio-button" for="en">
+        <input type="radio" name="lang" onchange="switchKbdLang(this.value)" id="en" value="en">
+        <span class="auth-form__radio-button-label">अंग्रेजी / English</span>
+      </label>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="applicant" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">आवेदक का नाम / Applicant Name</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="father" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">पिता का नाम / Father Name</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="mother" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">माता का नाम / Mother Name</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input pr-state"></div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <select id="district" class="v-render" onchange="subDivision(this.value, this.selectedIndex - 1)" required></select>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <select id="sub_division" class="v-render" onchange="blockPicker(this.value, this.selectedIndex - 1)" required>
+          <option value="" disabled hidden selected>अनुमंडल / Sub-Division (optional)</option>
+        </select>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <select id="block" class="v-render" required>
+          <option value="" disabled hidden selected>प्रखंड / Block (optional)</option>
+        </select>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="village" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">ग्राम (Village) / मोहल्ला (Town)</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="post_office" autocomplete="off" class="xfield v-render" required>
+        <span class="placeholder">डाक घर / Post Office</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <select id="police_station" class="v-render" required>
+          <option value="" disabled hidden selected>थाना / Police Station</option>
+        </select>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input caste-category"></div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <select id="caste" required>
+          <option value="" disabled="" hidden="" selected="">जाति / Caste</option>
+        </select>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="salary_income" autocomplete="off" class="xfield v-render" min="0" max="1000000" required>
+        <span class="placeholder">वेतन आय / Salary Income</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="other_income" autocomplete="off" class="xfield v-render" min="0" max="1000000" required>
+        <span class="placeholder">अन्य आय / Other Income</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="number" id="total_income" autocomplete="off" class="xfield" readonly>
+        <span class="placeholder">कुल आय (वार्षिक) / Total income (Annual)</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="field content_wrap upload_container">
+      <input type="file" id="signature" onchange="loadSignature(event)" accept="image/png, image/jpg, image/jpeg" hidden>
+      <div class="requests__section-title p-section-title">Upload Applicant Signature with transparent/white Background
+      </div>
+      <div class="upload" onclick="showUploaderBox()">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"></path>
+        </svg>
+        <span class="upload_label">Upload Signature of Applicant</span>
+      </div>
+      <div class="error">
+        <svg focusable="false" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;">
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+          </path>
+        </svg>
+        <span class="err_message"></span>
+      </div>
+      <div class="filename"></div>
+    </div>
+
+    <div style="color:#2072a0;font-size:18px;margin-bottom:16px;font-weight:600;">घोषणा / Self Declaration</div>
+
+    <div class="self">
+      <p>मैं <span class="applicant"></span>,  पिता- <span class="father"></span>, माता- <span class="mother"></span>,  ग्राम / मोहल्ला- <span class="village"></span>, डाकघर- <span class="post_office"></span>, थाना- <span class="police_station"></span>, प्रखंड- <span class="block"></span>, अनुमंडल- <span class="sub_division"></span>, जिला- <span class="district"></span>, राज्य- <span class="state">BIHAR</span> एवं मेरे परिवार की वार्षिक आय निम्नांकित है :-</p>
+      <p>वेतन आय ₹<span class="salary_income"></span>/-</p>
+      <p>अन्य स्रोतों से आय ₹<span class="other_income"></span>/-</p>
+      <p>कुल आय (वार्षिक) ₹<span class="total_income"></span>/-</p>
+      <p>मैं  प्रमाणित करता/करती हूँ कि मेरे द्वारा दी गई उपरोक्त जानकारी मेरे ज्ञान और विश्वास के अनुसार सत्य है| यदि मेरे द्वारा दी गई जानकारी असत्य / गलत पायी जाती है तो मैं पूर्ण रूप से जानता/जानती हूँ कि इस आवेदन-पत्र के आधार पर दिये गये प्रमाण-पत्र के द्वारा शैक्षणिक संस्थान में लिया गया प्रवेश / लोक सेवाओं में प्राप्त की गई नियुक्ति निरस्त कर दी जायेगी / दिया जायेगा अथवा इस प्रमाण-पत्र के आधार पर कोई अन्य सुविधा / लाभ प्राप्त किया गया है उससे भी वंचित किया जा सकेगा और इस संबंध में विधि एवं नियमों के अधीन मेरे विरूद्ध की जाने वाली कार्रवाई के लिए मैं उत्तरदायी रहूँगा/रहूँगी|</p>
+    </div>
+
+    <div class="field content_wrap">
+      <div class="input">
+        <input type="text" id="place" autocomplete="off" class="xfield" required>
+        <span class="placeholder">स्थान / Place</span>
+      </div>
+      <div class="error">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 1.2em;"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
+        <span class="err_message"></span>
+      </div>
+    </div>
+
+    <div class="btn_wrap">
+      <button type="submit">
+        <svg width="22" height="22" viewBox="0 0 46 46" class="preloader">
+          <circle cx="23" cy="23" r="18" stroke-width="4"></circle>
+        </svg>
+        <span>Generate Affidavit</span>
+      </button>
+    </div>
+  </form>
+</div>
